@@ -1,10 +1,10 @@
 #include "Graph.h"
 
-void Graph::ReadInformation(const char * filename, uint32_t ants_count, double PC)
+void Graph::ReadInformation(const char * filename, uint32_t antsCount, double PC)
 {
 	try 
 	{
-		if (ants_count <= 0)
+		if (antsCount <= 0)
 		{
 			throw "Error in ReadInformation constructor. Illegal ants count.";
 		}
@@ -58,7 +58,7 @@ void Graph::ReadInformation(const char * filename, uint32_t ants_count, double P
 				pointsCount = tmpNum1;
 				EdgesCount = tmpNum2;
 
-				for (unsigned int i = 0; i < ants_count; i++)
+				for (unsigned int i = 0; i < antsCount; i++)
 				{
 					m_RootsVector.push_back(Root(PC, pointsCount, EdgesCount, chromatic_number));
 				}
