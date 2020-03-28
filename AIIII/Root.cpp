@@ -64,18 +64,18 @@ void Root::RecolorPoint(PointOfGraph * point)
 	point->SetColor(bestColor);
 }
 
-Root::Root(double PC, uint32_t points_count, uint32_t ribs_count, uint32_t chromatic_number) 
+Root::Root(double PC, uint32_t pointsCount, uint32_t EdgesCount, uint32_t chromaticNumber) 
 	: m_PC(PC)
 	, m_PN(0.9)
-	, m_PointsCount(points_count)
-	, m_RibsCount(ribs_count)
-	, m_ChromaticNumber(chromatic_number) 
+	, m_PointsCount(pointsCount)
+	, m_EdgesCount(EdgesCount)
+	, m_ChromaticNumber(chromaticNumber) 
 {
 	uint32_t color;
 
-	for (unsigned int i = 0; i < points_count; i++)
+	for (unsigned int i = 0; i < pointsCount; i++)
 	{
-		color = rand() % chromatic_number;
+		color = rand() % chromaticNumber;
 		m_PointsVector.push_back(PointOfGraph(i + 1, color));
 	}
 
@@ -85,7 +85,7 @@ Root::Root(double PC, uint32_t points_count, uint32_t ribs_count, uint32_t chrom
 Root::Root(const Root& root)
 	: m_PC(root.GetPC())
 	, m_PointsCount(root.GetPointsCount())
-	, m_RibsCount(root.GetRibsCount())
+	, m_EdgesCount(root.GetRibsCount())
 	, m_ChromaticNumber(root.GetChromaticNumber()) 
 {
 	m_PointsVector = std::vector<PointOfGraph>(root.GetPointsVector());

@@ -36,8 +36,8 @@ void Graph::ReadInformation(const char * filename, uint32_t ants_count, double P
 			throw "Error in ReadInformation constructor. File can't be open.\n";
 		}
 
-		unsigned int points_count, ribs_count;
-		unsigned int tmp_num1, tmp_num2;
+		unsigned int pointsCount, EdgesCount;
+		unsigned int tmpNum1, tmpNum2;
 
 		while (!fin.eof()) 
 		{
@@ -51,34 +51,34 @@ void Graph::ReadInformation(const char * filename, uint32_t ants_count, double P
 			else if (tmpString[0] == 'p') 
 			{
 				fin >> tmpString >> tmpString;
-				tmp_num1 = stoi(tmpString);
+				tmpNum1 = stoi(tmpString);
 				fin >> tmpString;
-				tmp_num2 = stoi(tmpString);
+				tmpNum2 = stoi(tmpString);
 
-				points_count = tmp_num1;
-				ribs_count = tmp_num2;
+				pointsCount = tmpNum1;
+				EdgesCount = tmpNum2;
 
 				for (unsigned int i = 0; i < ants_count; i++)
 				{
-					m_RootsVector.push_back(Root(PC, points_count, ribs_count, chromatic_number));
+					m_RootsVector.push_back(Root(PC, pointsCount, EdgesCount, chromatic_number));
 				}
 			}
 
 			else 
 			{
 				fin >> tmpString;
-				tmp_num1 = stoi(tmpString);
+				tmpNum1 = stoi(tmpString);
 				fin >> tmpString;
-				tmp_num2 = stoi(tmpString);
+				tmpNum2 = stoi(tmpString);
 
-				if (tmp_num1 == tmp_num2)
+				if (tmpNum1 == tmpNum2)
 				{
 					break;
 				}
 
 				for (Root& root : m_RootsVector)
 				{
-					root.CreateRib(tmp_num1, tmp_num2);
+					root.CreateRib(tmpNum1, tmpNum2);
 				}
 			}
 		}

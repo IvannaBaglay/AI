@@ -14,7 +14,7 @@ public:
 	double GetPN() const { return m_PN; }
 	double GetPC() const { return m_PC; }
 	uint32_t GetPointsCount() const { return m_PointsCount; }
-	uint32_t GetRibsCount() const { return m_RibsCount; }
+	uint32_t GetRibsCount() const { return m_EdgesCount; }
 	uint32_t GetChromaticNumber() const { return m_ChromaticNumber; }
 	const std::vector<PointOfGraph>& GetPointsVector() const { return m_PointsVector; }
 	Ant GetAnt() const { return m_Ant; }
@@ -29,7 +29,7 @@ private:
 	double m_PN;
 	const double m_PC;
 	const uint32_t m_PointsCount;
-	const uint32_t m_RibsCount;
+	const uint32_t m_EdgesCount;
 	const uint32_t m_ChromaticNumber;
 	std::vector<PointOfGraph> m_PointsVector;
 	Ant m_Ant;
