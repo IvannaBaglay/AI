@@ -109,7 +109,7 @@ bool Root::ExecuteRoot()
 	{
 		UpdateConflictsCountInRoot();
 
-		const double confsoverall = CalcAllConflictsInRoot() / 2.;
+		const double confsoverall = CalcAllConflictsInRoot();
 
 		if (confsoverall == 0) 
 		{
