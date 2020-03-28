@@ -18,6 +18,19 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Ant.cpp" />
+    <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="PointOfGraph.cpp" />
+    <ClCompile Include="Root.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ant.h" />
+    <ClInclude Include="Graph.h" />
+    <ClInclude Include="PointOfGraph.h" />
+    <ClInclude Include="Root.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{71B1CBB2-6EC2-49D1-AE52-43B78B308ED9}</ProjectGuid>
@@ -137,19 +150,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\Desktop\AI\AIII\Ant.cpp" />
-    <ClCompile Include="..\..\..\..\Desktop\AI\AIII\Graph.cpp" />
-    <ClCompile Include="..\..\..\..\Desktop\AI\AIII\main.cpp" />
-    <ClCompile Include="..\..\..\..\Desktop\AI\AIII\PointOfGraph.cpp" />
-    <ClCompile Include="..\..\..\..\Desktop\AI\AIII\Root.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\..\Desktop\AI\AIII\Ant.h" />
-    <ClInclude Include="..\..\..\..\Desktop\AI\AIII\Graph.h" />
-    <ClInclude Include="..\..\..\..\Desktop\AI\AIII\PointOfGraph.h" />
-    <ClInclude Include="..\..\..\..\Desktop\AI\AIII\Root.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
